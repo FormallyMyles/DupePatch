@@ -15,7 +15,6 @@ public class Plug extends JavaPlugin implements Listener{
 	}
 	@EventHandler
 	public void onOpen(InventoryOpenEvent e){
-		System.out.println(e.getInventory().getHolder().getClass());
 		if(e.getPlayer().isInsideVehicle() && e.getInventory().getHolder() instanceof Minecart){
 			((Player) e.getPlayer()).sendMessage(ChatColor.RED + "You may not open Minecart Inventories while in a vehicle.");
 			System.out.println("[Alert] " + e.getPlayer().getName() + " just tried to use a duplication glitch.");
